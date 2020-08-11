@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'CSS/sample.css' %}" type="text/css">
+
+    <title>Foody website</title>
+</head>
+<body>
+<form action="{% url 'show' %}" method="post">
+    {% csrf_token %}
+<h1 align="center"><span id="dillicious">Dillicious</span>
+    <span id="food">Food</span>
+</h1>
+<div align="center" id="anchor">
+    <a href="#home">Home</a> |
+    <a href="#snacks">Snacks</a> |
+    <a href="#south">South Food</a>  |
+    <a href="#sweets">Sweets</a> |
+     <a href="#nonveg">Nonveg</a>
+
+</div>
+ {%  if ms %}
+     <table align="center" border="0" bgcolor="red">
+     <tr>
+         <td > <span>{{ ms}}</span></td>
+     </tr>
+     </table>
+
+    {% endif %}
+<div id="home">
+<h2 align="center "id="welcome" > Welcome to Our food Word</h2>
+<p align="center">Food contains the nutrition that people and animals need to be healthy. The consumption of food
+    is normally enjoyable to humans. It contains protein, fat, carbohydrates, vitamins, water and minerals. ...
+    Some people refuse to eat food from animal origin, like meat, eggs, and products with milk in them.</p>
+<table >
+    <tr>
+        <td><img src="{% static 'Images/fried-potatoes-1583884.jpg' %}" width="300" height="200"></td>
+        <td><img src="{% static 'Images/cooked-leg-chicken-with-green-vegetable-leaf-60616.jpg' %}" width="300" height="200"></td>
+    </tr>
+</table>
+    </div>
+<div id="snacks">
+    <h1 align="center" > Fresh Snacks</h1>
+ <table>
+     <tr>
+         <td><img src="{% static 'Images/top-view-photo-of-baked-pizza-2147491.jpg '%}">
+             <h4>Pizaa 200  RS<input type="checkbox" name="price" value="200"> </h4>
+
+
+         </td>
+         <td><img src="{% static 'Images/burger-and-bacon-sandwich-2983099.jpg' %}">
+              <h4>french fries 100  RS<input type="checkbox" name="price" value="200"> </h4>
+         </td>
+         <td><img src="{% static 'Images/chinease2.jpg' %}">
+              <h4>french rice 150 RS<input type="checkbox" name="price" value="200"> </h4>
+         </td>
+         <td><img src="{% static 'Images/chinease3.jpg' %}">
+              <h4>Veg Rice 120 RS<input type="checkbox" name="price" value="200"> </h4>
+         </td>
+     </tr>
+ </table>
+</div>
+<div id="sweets">
+    <h1 align="center" > Sweets</h1>
+ <table>
+     <tr>
+         <td><img src="{% static 'Images/slice-cake-1854652.jpg '%}">
+             <h4> Slice Cake 100 RS<input type="checkbox" name="price" value="200"> </h4>
+         </td>
+         <td><img src="{% static 'Images/sweet2.jpg' %}">
+             <h4>pedda 200 RS<input type="checkbox" name="price" value="200"> </h4>
+         </td>
+         <td><img src="{% static 'Images/sweet3.jpg' %}">
+             <h4>Barafi 180 RS<input type="checkbox" name="price" value="200"> </h4>
+         </td>
+         <td><img src="{% static 'Images/sweet4.jpg'%}" alt="price">
+             <h4>Laddu 140 RS<input type="checkbox" name="laddu" value="200"> </h4>
+         </td>
+     </tr>
+ </table>
+</div>
+
+<div id="south">
+    <h1 align="center" > South Food</h1>
+ <table>
+     <tr>
+         <td><img src="{% static 'Images/idaly.jpg'%}">
+             <h4>Idaly 80 RS<input type="checkbox" name="price" value="200"> </h4>
+         </td>
+         <td><img src="{% static 'Images/mysorebonda.jpg' %}">
+             <h4>Mysore Bonda 120 RS<input type="checkbox" name="price" value="200"> </h4>
+         </td>
+         <td><img src="{% static 'Images/vada.jpg' %}">
+             <h4>Vada  120 RS<input type="checkbox" name="price" value="200"> </h4>
+         </td>
+         <td><img src="{% static 'Images/masaladosa.jpg' %}">
+             <h4> Masala Dosa 150 RS<input type="checkbox" name="price" value="200"> </h4>
+         </td>
+     </tr>
+ </table>
+</div>
+<div id="nonveg">
+    <h1 align="center" > Nonveges</h1>
+ <table>
+     <tr>
+         <td><img src="{% static 'Images/burrito-chicken-delicious-dinner-461198.jpg '%}">
+             <h4>Veg Rice 120 RS<input type="checkbox" name="pizaa" value="200"> </h4>
+         </td>
+         <td><img src="{% static 'Images/chicken2.jpg' %}">
+             <h4>Veg Rice 120 RS<input type="checkbox" name="pizaa" value="200"> </h4>
+         </td>
+         <td><img src="{% static 'Images/chicken3.jpg' %}">
+             <h4>Veg Rice 120 RS<input type="checkbox" name="pizaa" value="200"> </h4>
+         </td>
+         <td><img src="{% static 'Images/chikken1.jpg' %}">
+             <h4>Veg Rice 120 RS<input type="checkbox" name="pizaa" value="200"> </h4>
+         </td>
+     </tr>
+ </table>
+    <button  type="submit" class="button">Total</button>
+</div>
+
+</div>
+<footer  class="foot">
+    <span >Copyright 2020
+        <h2>Email:<a href="http://127.0.0.1:8000/index">mjkhandale79@gmail.com</a></h2>
+    </span>
+</footer>
+<div align="center" id="anchor">
+    <a href="#home">Home</a> |
+    <a href="#snacks">Snacks</a> |
+    <a href="#south">South Food</a>  |
+    <a href="#sweets">Sweets</a> |
+     <a href="#nonveg">Nonveg</a>
+
+</div>
+<script type="javascript">
+
+</script>
+</form>
+</body>
+</html>
